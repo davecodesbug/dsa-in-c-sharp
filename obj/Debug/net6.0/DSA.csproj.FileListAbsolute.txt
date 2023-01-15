@@ -1,0 +1,15 @@
+C:\Users\Backend Yemi\RiderProjects\DSA\bin\Debug\net6.0\DSA.exe
+C:\Users\Backend Yemi\RiderProjects\DSA\bin\Debug\net6.0\DSA.deps.json
+C:\Users\Backend Yemi\RiderProjects\DSA\bin\Debug\net6.0\DSA.runtimeconfig.json
+C:\Users\Backend Yemi\RiderProjects\DSA\bin\Debug\net6.0\DSA.dll
+C:\Users\Backend Yemi\RiderProjects\DSA\bin\Debug\net6.0\DSA.pdb
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\DSA.csproj.AssemblyReference.cache
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\DSA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\DSA.AssemblyInfoInputs.cache
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\DSA.AssemblyInfo.cs
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\DSA.csproj.CoreCompileInputs.cache
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\DSA.dll
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\refint\DSA.dll
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\DSA.pdb
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\DSA.genruntimeconfig.cache
+C:\Users\Backend Yemi\RiderProjects\DSA\obj\Debug\net6.0\ref\DSA.dll
