@@ -10,6 +10,12 @@ C# Data structure and algorithm basic/advanced topics practice and documentation
 4. [Priority queues](#priority-queues)
 5. [LinkedLists](#linkedlists)
 6. [Dynamic Arrays](#dynamic-arrays)
+7. [Big O Notation](#big-o-notation)
+8. [Algorithms](#algorithms)
+9. [Search Algorithms](#search-algorithms)
+10. [Linear Search](#linear-search)
+11. [Binary Search](#binary-search)
+12. [Interpolation Search](#interpolation-search)
 
 ----------------------------------------------------------------------------------------------------
 
@@ -134,3 +140,118 @@ games.Add("PUBG");
 * .Count => To get the total number of item in a dynamic array
 * .Clear() => To remove all items from a dynamic array at once
 * .Sort() => To sort items in the array alphabetically or in ascending order
+
+## Big O Notation
+
+Big O notation is `how code slows as data grows`. It's used to detect how long an algorithm takes to run (time complexity) or how much memory is consumed by an algorithm (space complexity).
+
+**Types of Big O run time: 👇**
+
+* 0(1) => Constant time
+* 0(log n) => Logarithmic time
+* 0(n) => Linear time
+* 0(n log n) => Quasilinear time
+* 0(n^²) => Quadratic time
+* 0(n!) => Factorial time
+
+**Visual representation: 👇**
+
+![Big o notation](./Images/bigonotation.PNG "Big o notation")
+
+# Algorithms
+
+Algorithms in CS is a set of rules to be followed for implementing a problem solving operations. Here are some of the useful algos to know and use.
+
+## Search Algorithms
+
+## Linear Search
+
+Linear search is a simple search algorithms that will iterate through a collection of element one at a time to find a particular match that's passed in. It's a fast algorithm to implement with small to medium dataset `(<100)`. Example: 👇
+
+```csharp
+private static void Main()
+{
+    // Array of `int` to search through
+    int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    int index = linearSearch(nums, 3);
+    
+    // Ternary operator to check whether the index matched with the value
+    var confirm = index != -1 ? $"Element found at: {index}" : "Element not found!";
+            
+    Console.WriteLine(confirm);
+}
+
+// Linear search function expecting a parameter of array and integer value
+private static int linearSearch(int[] nums, int value)
+{
+    // Iterating over the array and checking if it matched the value passed in
+    for (int i = 0; i < nums.Length; i++)
+    {
+        if (nums[i] == value)
+        {
+            return i;
+        }
+    }
+
+    return -1;
+}
+```
+
+## Binary Search
+
+Binary search is an algorithm used to finds the position of a given target value within a one dimensional sorted array. It's used to work with medium to large dataset as it will eliminate half of the array during each step. To implement the binary search algo is fairly simple in C#. Example: 👇
+
+```csharp
+// Initializing an array of type `int`
+int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+// The target we are trying to find
+const int target = 7;
+            
+// Storing the `Array.BinarySearch` method in a variable
+var index = Array.BinarySearch(numbers, target);
+// Checking if our target is found or not using ternary operator
+var foundOrNot = index == -11 ? $"{target} not found!" : $"Target found at {index}";
+            
+Console.WriteLine(foundOrNot);
+```
+
+## Interpolation Search
+
+Interpolation search is an improved variant of binary search. Just that this algorithm only works on the probing position of the required value in a sorted array that are uniformly|evenly|equally distributed.
+
+```csharp
+private static void Main()
+{
+    int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    int index = InterpolationSearch(numbers, 7);
+
+    string probeValue = index != -1 ? $"Value found at index: {index}" : "Value not found!";
+    Console.WriteLine(probeValue);
+}
+
+private static int InterpolationSearch(int[] numbers, int value)
+{
+    int hi = numbers.Length - 1;
+    int lo = 0;
+
+    while (value >= numbers[lo] && value <= numbers[hi] && lo <= hi)
+    {
+        int probe = lo + (hi - lo) * (value - numbers[lo]) / (numbers[hi] - numbers[lo]);
+        Console.WriteLine($"Probe area: {probe}");
+
+        if (numbers[probe] == value)
+        {
+            return probe;
+        } else if (numbers[probe] < value)
+        {
+            lo = probe + 1;
+        }
+        else
+        {
+            hi = probe - 1;
+        }
+    }
+
+    return -1;
+}
+```
